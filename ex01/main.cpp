@@ -8,7 +8,7 @@ std::string user_input(std::string msg)
 	std::string input = "";
 
 	std::cout << msg << std::endl;
-	std::cin >> input;
+	std::getline(std::cin, input);
 	return input;
 }
 
@@ -34,6 +34,8 @@ int main(void)
 	while (true)
 	{
 		std::string command = user_input("Enter command: ");
+		if (std::cin.eof())
+			break ;
 		if (command.compare("EXIT") == 0)
 			break;
 		if (command.compare("ADD") == 0)
