@@ -16,8 +16,17 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 
 void Contact::print(Contact c)
 {
-	std::cout << "First name: " << c._first_name;
-	std::cout << "Last name: " << c._last_name;
+	std::cout << "First name: " << c._first_name << "|";
+	std::cout << "Last name: " << c._last_name << "|";
 	std::cout << "Nickname: " << c._nickname;
 	std::cout << std::endl;
+}
+
+void Contact::print_full(Contact c)
+{
+	std::cout << "First name: " << c._first_name << std::endl;
+	std::cout << "Last name: " << c._last_name << std::endl;
+	std::cout << "Nickname: " << c._nickname << std::endl;
+	std::cout << "Phonenumber: " << c._phone_number << std::endl;
+	std::cout << "Darkest secret: " << c._secret << std::endl;
 }

@@ -20,22 +20,26 @@ void	add_contact(Phonebook & pb)
 	std::string phonenumber = user_input("Phone number:");
 	std::string secret = user_input("Darkest secret:");
 	
-	if (first_name.empty() || last_name.empty())
+	if (first_name.empty() || last_name.empty() || nickname.empty())
+		return ;
+	if (phonenumber.empty() || secret.empty())
 		return ;
 	Contact c(first_name, last_name, nickname, phonenumber, secret);
 	//c.print(c);
 	pb.add_contact(c);
 
 }
+
+
 int main(void)
 {
 	Phonebook   pb = Phonebook();
 
 	while (true)
 	{
-		std::string command = user_input("Enter command: ");
 		if (std::cin.eof())
 			break ;
+		std::string command = user_input("Enter command: ");
 		if (command.compare("EXIT") == 0)
 			break;
 		if (command.compare("ADD") == 0)
