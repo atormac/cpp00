@@ -21,5 +21,3 @@ void Contact::print(Contact c)
 	std::cout << "Nickname: " << c._nickname;
 	std::cout << std::endl;
 }
-
-
