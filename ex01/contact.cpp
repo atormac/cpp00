@@ -14,8 +14,9 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 	_secret = secret;
 }
 
-void Contact::print(Contact c)
+void Contact::print(Contact c, int index)
 {
+	std::cout << "Index: " << index << "|";
 	std::cout << "First name: " << c._first_name << "|";
 	std::cout << "Last name: " << c._last_name << "|";
 	std::cout << "Nickname: " << c._nickname;

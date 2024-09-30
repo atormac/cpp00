@@ -16,7 +16,7 @@ class Contact
 		Contact();
 		Contact(std::string first_name, std::string last_name, std::string nickname,
 				std::string phone_number, std::string secret);
-		void print(Contact c);
+		void print(Contact c, int index);
 		void print_full(Contact c);
 };
 #endif

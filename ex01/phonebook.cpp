@@ -19,17 +19,16 @@ void	Phonebook::display()
 
 	if (count > 8)
 		count = 8;
-	printf("record count: %d\n", count);
 	for (int i = 0; i < count; i++)
 	{
-		this->book[i].print(this->book[i]);
+		this->book[i].print(this->book[i], i);
 	}
 	std::string index = user_input("Enter index (0 - 7) to display full contact info");
 	if (std::cin.eof())
 		return;
 	const char *num = index.c_str();
-	int i = '0' - *num;
-	if (index.length() != 1 || *num < '0' || *num > '7' || i > this->index)
+	int i = *num - '0';
+	if (index.length() != 1 || *num < '0' || *num > '7' || i >= count)
 	{
 		std::cout << "Invalid index provided" << std::endl;
 		return;
