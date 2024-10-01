@@ -17,6 +17,8 @@ void	Phonebook::display()
 {
 	int count = this->index;
 
+	if (count == 0)
+		return;
 	if (count > 8)
 		count = 8;
 	for (int i = 0; i < count; i++)
