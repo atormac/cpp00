@@ -1,19 +1,19 @@
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 std::string user_input(std::string msg);
 
-Phonebook::Phonebook()
+PhoneBook::PhoneBook()
 {
 	this->index = 0;
 }
 
-void Phonebook::add_contact(Contact c)
+void PhoneBook::add_contact(Contact c)
 {
 	this->book[this->index % 8] = c;
 	this->index++;
 }
 
-void	Phonebook::display()
+void	PhoneBook::display()
 {
 	int count = this->index;
 

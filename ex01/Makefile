@@ -2,7 +2,7 @@ NAME = phonebook
 CXX = c++
 CXXFLAGS := -Wall -Wextra -Werror
 
-SOURCES := main.cpp contact.cpp phonebook.cpp
+SOURCES := main.cpp Contact.cpp PhoneBook.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 
 target asan: CXXFLAGS += -fsanitize=address,undefined -g

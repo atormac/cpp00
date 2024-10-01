@@ -3,15 +3,15 @@
 
 #include <string>
 #include <iostream>
-#include "contact.hpp"
+#include "Contact.hpp"
 
-class Phonebook
+class PhoneBook
 {	
 	private:
 		int	index;
 		Contact book[8];
 	public:
-		Phonebook();
+		PhoneBook();
 		void add_contact(Contact c);
 		void display();	
 

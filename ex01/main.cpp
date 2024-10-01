@@ -1,6 +1,6 @@
 #include <iostream>
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 
 std::string user_input(std::string msg)
@@ -14,7 +14,7 @@ std::string user_input(std::string msg)
 	return input;
 }
 
-void	add_contact(Phonebook & pb)
+void	add_contact(PhoneBook & pb)
 {
 	std::string first_name = user_input("First name:");
 	std::string last_name = user_input("Last name:");
@@ -32,7 +32,7 @@ void	add_contact(Phonebook & pb)
 
 int main(void)
 {
-	Phonebook   pb = Phonebook();
+	PhoneBook   pb = PhoneBook();
 
 	while (!std::cin.eof())
 	{
