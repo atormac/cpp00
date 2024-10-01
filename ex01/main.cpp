@@ -7,6 +7,8 @@ std::string user_input(std::string msg)
 {
 	std::string input = "";
 
+	if (std::cin.eof())
+		return input;
 	std::cout << msg << std::endl;
 	std::getline(std::cin, input);
 	return input;
