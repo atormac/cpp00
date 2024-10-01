@@ -25,20 +25,15 @@ void	add_contact(Phonebook & pb)
 	if (phonenumber.empty() || secret.empty())
 		return ;
 	Contact c(first_name, last_name, nickname, phonenumber, secret);
-	//c.print(c);
 	pb.add_contact(c);
-
 }
-
 
 int main(void)
 {
 	Phonebook   pb = Phonebook();
 
-	while (true)
+	while (!std::cin.eof())
 	{
-		if (std::cin.eof())
-			break ;
 		std::string command = user_input("Enter command: ");
 		if (command.compare("EXIT") == 0)
 			break;

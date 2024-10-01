@@ -1,4 +1,5 @@
 #include "contact.hpp"
+#include <iomanip>
 
 Contact::Contact()
 {
@@ -14,13 +15,19 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 	_secret = secret;
 }
 
+std::string truncate(std::string in)
+{
+	if (in.length() > 10)
+		return in.substr(0, 9) + ".";
+	return in;
+}
+
 void Contact::print(Contact c, int index)
 {
-	std::cout << "Index: " << index << "|";
-	std::cout << "First name: " << c._first_name << "|";
-	std::cout << "Last name: " << c._last_name << "|";
-	std::cout << "Nickname: " << c._nickname;
-	std::cout << std::endl;
+	std::cout << std::setw(10) << index << "|";
+	std::cout << std::setw(10) << truncate(c._first_name) << "|";
+	std::cout << std::setw(10) << truncate(c._last_name) << "|";
+	std::cout << std::setw(10) << truncate(c._nickname) << std::endl;
 }
 
 void Contact::print_full(Contact c)
